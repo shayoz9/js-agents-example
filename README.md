@@ -1,0 +1,1 @@
+This project uses langchain to create a Gemini agent that can search the weather
