@@ -5,6 +5,7 @@ import axios from "axios";
 export const WeatherSearchTool = new DynamicStructuredTool({
     name: "weather_search", // this is how the LLM will call your tool
     description: "searches for weather information according to city", // IMPORTANT! this is how the LLM knows when to call the tool, using the description the LLM knows in what cases to call the tool
+    // we are using the zod library to describe the schema of the input data required to run this tool
     schema: z.object({ // we need to describe the schema of the input data required to run this tool, once it is called the input will be structured accordingly 
         country: z.string().describe("the ISO 3166 3 letters country code"),
         city: z.string().describe("the city name"),
